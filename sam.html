@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Online Resume Builder</h1>
+        <form id="resume-form">
+            <!-- Template Selection -->
+            <h2>Choose a Template</h2>
+            <select id="template-select">
+                <option value="template1">Template 1 (Basic)</option>
+                <option value="template2">Template 2 (Modern)</option>
+                <option value="template3">Template 3 (Professional)</option>
+            </select>
+
+            <!-- Personal Details -->
+            <h2>Personal Details</h2>
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <textarea id="address" placeholder="Address" required></textarea>
+
+            <!-- Work Experience -->
+            <h2>Work Experience</h2>
+            <input type="text" id="job-title" placeholder="Job Title">
+            <input type="text" id="company" placeholder="Company">
+            <input type="text" id="duration" placeholder="Duration">
+            <textarea id="responsibilities" placeholder="Responsibilities"></textarea>
+
+            <!-- Education -->
+            <h2>Education</h2>
+            <input type="text" id="degree" placeholder="Degree">
+            <input type="text" id="institution" placeholder="Institution">
+            <input type="text" id="year" placeholder="Year">
+
+            <!-- Skills -->
+            <h2>Skills</h2>
+            <textarea id="skills" placeholder="List your skills"></textarea>
+
+            <!-- Projects -->
+            <h2>Projects</h2>
+            <input type="text" id="project-title" placeholder="Project Title">
+            <textarea id="project-description" placeholder="Project Description"></textarea>
+            <input type="text" id="project-link" placeholder="Project Link (optional)">
+
+            <!-- Buttons -->
+            <button type="submit">Generate Resume</button>
+            <button type="reset">Reset Form</button>
+        </form>
+
+        <!-- Resume Output -->
+        <div id="resume-output" class="resume-output">
+            <h2>Your Resume</h2>
+            <div id="resume-content"></div>
+            <button id="download-pdf">Download as PDF</button>
+        </div>
+    </div>
+
+    <!-- Include jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
